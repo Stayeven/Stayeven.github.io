@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.back-btn-header {
+    background: #00A651;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.back-btn-header:hover {
+    background: #008C44;
+}
+
+.subject-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.subject-icon {
+    width: 50px;
+    height: 50px;
+    background: #00A651;
+    color: white;
+    border-radius: 8px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subject-info h1 {
+    font-size: 28px;
+    color: #00A651;
+    margin: 0;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.subject-info p {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sync-status {
+    font-size: 12px;
+    color: #999;
+    margin-right: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: #00A651;
+    color: white;
+}
+
+.tab-btn:not(.active) {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #d0d0d0;
+}
+
+.clear-btn {
+    padding: 10px 20px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.clear-btn:hover {
+    background: #c82333;
+}
+
+.weights-container {
+    background: white;
+    padding: 20px 30px;
+    display: flex;
+    gap: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.weight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weight-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.weight-item input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+}
+
+.grades-container {
+    padding: 30px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: auto;
+    min-width: 100%;
+}
+
+.grades-table th:first-child,
+.grades-table td:first-child {
+    width: 300px;
+    min-width: 300px;
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 10;
+}
+
+.grades-table th:first-child::before,
+.grades-table td:first-child::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: white;
+    z-index: 99;
+}
+
+.grades-table thead th:first-child {
+    background: #f8f9fa;
+    z-index: 11;
+}
+
+.student-row:hover td {
+    background: #f8f9fa;
+}
+
+.grades-table th:nth-last-child(2),
+.grades-table td:nth-last-child(2) {
+    width: 120px;
+    min-width: 120px;
+}
+
+.grades-table th:last-child,
+.grades-table td:last-child {
+    width: 100px;
+    min-width: 100px;
+}
+
+.score-col {
+    min-width: 180px;
+}
+
+.student-name-input {
+    width: 100%;
+    min-width: 180px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.student-name-input:focus {
+    outline: none;
+    border-color: #00A651;
+}
+
+.student-number-input {
+    width: 100%;
+    min-width: 100px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.student-number-input:focus {
+    outline: none;
+    border-color: #00A651;
+}
+
+.grades-table thead {
+    background: #f8f9fa;
+}
+
+.grades-table th {
+    padding: 15px 25px;
+    text-align: left;
+    font-weight: 600;
+    color: #999;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grades-table th:first-child {
+    padding-right: 60px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.grades-table th:nth-last-child(2) {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.grades-table th:last-child {
+    text-align: center;
+}
+
+.score-col {
+    text-align: center;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    min-width: 120px;
+}
+
+.max-points-row {
+    background: white !important;
+}
+
+.max-points-row td:first-child {
+    position: sticky;
+    left: 0;
+    background: white !important;
+    z-index: 10;
+}
+
+.max-points-label {
+    text-align: right;
+    font-size: 11px;
+    color: #999;
+    padding: 10px 15px;
+}
+
+.grades-table td {
+    padding: 15px 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.grades-table td:first-child {
+    padding-right: 60px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.grades-table th:first-child {
+    padding-right: 60px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.grades-table td:nth-last-child(2) {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.grades-table td:last-child {
+    text-align: center;
+}
+
+.section-header {
+    background: #e8f0fe !important;
+}
+
+.section-header td {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    padding: 12px 15px;
+    position: sticky;
+    left: 0;
+    background: #e8f0fe !important;
+    z-index: 8;
+}
+
+.add-row-btn-row {
+    background: white;
+}
+
+.add-row-btn-row td {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 9;
+}
+
+.add-row-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: #00A651;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.add-row-btn:hover {
+    background: #f8f9fa;
+}
+
+.student-row td {
+    background: white;
+}
+
+.student-row:hover td {
+    background: #f8f9fa;
+}
+
+.delete-btn {
+    padding: 8px 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.average-score {
+    font-weight: 600;
+    color: #00A651;
+    text-align: right !important;
+    font-size: 18px;
+    padding-right: 40px !important;
+}
+
+input[type="text"]::placeholder {
+    color: #dc3545;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.controls {
+    background: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+    background: #00A651;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #008a43;
+}
+
+.subject-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.send-registrar-btn {
+    background: #00A651;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.send-registrar-btn:hover {
+    background: #008a43;
+}

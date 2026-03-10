@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Grades</title>
+    <link rel="stylesheet" href="../css/edit-grades.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-left">
+                <button onclick="goBack()" class="back-btn-header">←</button>
+                <div class="subject-badge">
+                    <span class="subject-icon" id="subjectIcon">E</span>
+                    <div class="subject-info">
+                        <h1 id="subjectName">ESP</h1>
+                        <p id="classInfo">11 - PEDRO | 1ST</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="sync-status">SYNC READY</span>
+                <button onclick="sendToRegistrar()" class="send-registrar-btn">Send to Registrar</button>
+                <button onclick="addColumn('activity')" class="tab-btn" id="activityBtn">+ Activity</button>
+                <button onclick="addColumn('pt')" class="tab-btn" id="ptBtn">+ PT</button>
+                <button onclick="addColumn('exam')" class="tab-btn" id="examBtn">+ Exam</button>
+                <button onclick="clearTable()" class="clear-btn">Clear Table</button>
+            </div>
+        </header>
+
+        <div class="weights-container">
+            <div class="weight-item">
+                <span class="weight-label">ACT %</span>
+                <input type="number" id="actWeight" value="30" min="0" max="100" onchange="updateWeights()">
+            </div>
+            <div class="weight-item">
+                <span class="weight-label">PT %</span>
+                <input type="number" id="ptWeight" value="50" min="0" max="100" onchange="updateWeights()">
+            </div>
+            <div class="weight-item">
+                <span class="weight-label">EXAM %</span>
+                <input type="number" id="examWeight" value="20" min="0" max="100" onchange="updateWeights()">
+            </div>
+        </div>
+        
+        <div class="grades-container">
+            <div class="table-container">
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th class="student-col">STUDENT NAME</th>
+                            <th class="score-col">AVERAGE</th>
+                            <th class="action-col">ACTION</th>
+                        </tr>
+                        <tr class="max-points-row">
+                            <td></td>
+                            <td colspan="2" class="max-points-label">MAX POINTS:</td>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTable">
+                        <tr class="section-header">
+                            <td colspan="3">BOYS</td>
+                        </tr>
+                        <tr class="add-row-btn-row">
+                            <td colspan="3">
+                                <button onclick="addRow('boys')" class="add-row-btn">+ Add Row</button>
+                            </td>
+                        </tr>
+                        <tr class="section-header">
+                            <td colspan="3">GIRLS</td>
+                        </tr>
+                        <tr class="add-row-btn-row">
+                            <td colspan="3">
+                                <button onclick="addRow('girls')" class="add-row-btn">+ Add Row</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/edit-grades.js"></script>
+</body>
+</html>

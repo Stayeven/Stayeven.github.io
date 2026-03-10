@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - Registrar</title>
+    <link rel="stylesheet" href="../css/registrar-student-details.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-left">
+                <button onclick="goBack()" class="back-btn-header">←</button>
+                <div class="student-info">
+                    <h1 id="studentName">Student Name</h1>
+                    <p id="studentDetails">Grade 12 - STEM - St. Margaret | ESP - Q1</p>
+                </div>
+            </div>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+        
+        <div class="main-container">
+            <div class="summary-card">
+                <h3>Grade Summary</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="summary-label">Average:</span>
+                        <span class="summary-value failing" id="averageGrade">0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Status:</span>
+                        <span class="summary-value failing">FAILING</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activities-container">
+                <h3>Missing Activities</h3>
+                <div id="missingActivities" class="activities-list">
+                    <!-- Missing activities will be populated here -->
+                </div>
+            </div>
+
+            <div class="activities-container">
+                <h3>All Scores</h3>
+                <div class="table-container">
+                    <table class="scores-table">
+                        <thead>
+                            <tr>
+                                <th>Activity/Assessment</th>
+                                <th>Type</th>
+                                <th>Score</th>
+                                <th>Max Points</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scoresTable">
+                            <!-- Scores will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/registrar-student-details.js"></script>
+</body>
+</html>

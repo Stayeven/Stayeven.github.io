@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../css/teacher-dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <img src="../assets/logo.jpeg" alt="Logo" class="header-logo">
+            <h1>Teacher Dashboard</h1>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+        
+        <div class="selection-container">
+            <h2>Academic Management</h2>
+            
+            <div class="selection-form">
+                <div class="horizontal-flow">
+                    <div class="form-group">
+                        <label for="grade">GRADE LEVEL</label>
+                        <select id="grade" onchange="updateForm()">
+                            <option value="">Select Grade</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+
+                    <div id="strandGroup" class="form-group" style="display: none;">
+                        <label for="strand">STRAND</label>
+                        <select id="strand" onchange="updateSections(); updateSubjects();">
+                            <option value="">Select Strand</option>
+                            <option value="STEM">STEM</option>
+                            <option value="ABM">ABM</option>
+                            <option value="HUMSS">HUMSS</option>
+                            <option value="GAS">GAS</option>
+                            <option value="TVL">TVL</option>
+                        </select>
+                    </div>
+
+                    <div id="sectionGroup" class="form-group">
+                        <label for="section">SECTION</label>
+                        <select id="section">
+                            <option value="">Select Section</option>
+                            <option value="A">Section A</option>
+                            <option value="B">Section B</option>
+                            <option value="C">Section C</option>
+                            <option value="D">Section D</option>
+                        </select>
+                    </div>
+
+                    <div id="semesterGroup" class="form-group" style="display: none;">
+                        <label for="semester">SEMESTER</label>
+                        <select id="semester" onchange="updateQuarter()">
+                            <option value="">Select Semester</option>
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quarter">QUARTER</label>
+                        <select id="quarter">
+                            <option value="">Select Quarter</option>
+                            <option value="1">1st Quarter</option>
+                            <option value="2">2nd Quarter</option>
+                            <option value="3">3rd Quarter</option>
+                            <option value="4">4th Quarter</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">SUBJECT</label>
+                        <select id="subject">
+                            <option value="">Select Subject</option>
+                            <option value="Math">Mathematics</option>
+                            <option value="Science">Science</option>
+                            <option value="English">English</option>
+                            <option value="Filipino">Filipino</option>
+                            <option value="AP">Araling Panlipunan</option>
+                            <option value="MAPEH">MAPEH</option>
+                            <option value="TLE">TLE</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button onclick="proceed()" class="proceed-btn">Edit Grades</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/teacher-dashboard.js"></script>
+</body>
+</html>
