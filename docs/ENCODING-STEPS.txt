@@ -1,0 +1,274 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                   GRADING SYSTEM - ENCODING GUIDE                ║
+║                  Sistema sa Grades - Giya sa Pag-encode          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 1: LOGIN                                   │
+└──────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────┐
+    │   Welcome Back              │
+    │                             │
+    │   ○ Teacher  ○ Registrar    │
+    │                             │
+    │   Email: ________________   │
+    │   Password: ____________    │
+    │                             │
+    │        [ LOGIN ]            │
+    └─────────────────────────────┘
+
+    Email: brocalrhiankate@gmail.com (or other authorized)
+    Password: CCCS2026
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 2: SELECT CLASS                          │
+└──────────────────────────────────────────────────────────────────┘
+
+    Grade Level:  [▼ Select Grade]
+                     ├─ Grade 7
+                     ├─ Grade 8
+                     ├─ Grade 9
+                     ├─ Grade 10
+                     ├─ Grade 11 ← If selected, show Strand & Semester
+                     └─ Grade 12 ← If selected, show Strand & Semester
+
+    Strand:       [▼ Select Strand] (Only for Grade 11-12)
+                     ├─ STEM
+                     ├─ ABM
+                     ├─ HUMSS
+                     ├─ GAS
+                     └─ TVL
+
+    Section:      [▼ Select Section]
+                     ├─ Margaret (example for G12 STEM)
+                     ├─ Rita
+                     └─ Martha
+
+    Semester:     [▼ Select Semester] (Only for Grade 11-12)
+                     ├─ 1st Semester
+                     └─ 2nd Semester
+
+    Quarter:      [▼ Select Quarter]
+                     ├─ 1st Quarter
+                     ├─ 2nd Quarter
+                     ├─ 3rd Quarter
+                     └─ 4th Quarter
+
+    Subject:      [▼ Select Subject]
+                     ├─ Gen Chem 1 (example)
+                     ├─ Gen Physics 1
+                     └─ ESP
+
+                  [ EDIT GRADES ]
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 3: GRADE EDITOR                      │
+└──────────────────────────────────────────────────────────────────┘
+
+    ┌────────────────────────────────────────────────────────────┐
+    │ ← Back    Grade 12 STEM - Margaret | 1st Sem 1st Quarter  │
+    │                                                            │
+    │ [Add Activity] [Add PT] [Add Exam]  [Send to Registrar]   │
+    │                                                            │
+    │ Weights: Activity [30]% PT [50]% Exam [20]% [Update]      │
+    └────────────────────────────────────────────────────────────┘
+
+    ┌────────────────────────────────────────────────────────────┐
+    │ STUDENT NAME  │ Act 1: Quiz │ PT 1 │ Exam │ AVG │ ACTION │
+    │               │    [20]     │ [50] │[100] │     │        │
+    ├───────────────┼─────────────┼──────┼──────┼─────┼────────┤
+    │ BOYS                                                       │
+    ├───────────────┼─────────────┼──────┼──────┼─────┼────────┤
+    │ Juan Dela Cruz│    [18]     │ [45] │ [85] │82.5%│   🗑️   │
+    │ Pedro Santos  │    [20]     │ [48] │ [90] │86.0%│   🗑️   │
+    │ Jose Reyes    │    [15]     │ [40] │ [70] │68.5%│   🗑️   │
+    │               │             │      │      │     │        │
+    │ [+ Add Row]                                               │
+    ├───────────────┼─────────────┼──────┼──────┼─────┼────────┤
+    │ GIRLS                                                      │
+    ├───────────────┼─────────────┼──────┼──────┼─────┼────────┤
+    │ Maria Garcia  │    [19]     │ [50] │ [95] │90.0%│   🗑️   │
+    │ Ana Lopez     │    [17]     │ [46] │ [88] │84.2%│   🗑️   │
+    │               │             │      │      │     │        │
+    │ [+ Add Row]                                               │
+    └───────────────┴─────────────┴──────┴──────┴─────┴────────┘
+
+    Legend:
+    [20]  = Max points for column
+    [18]  = Student score
+    82.5% = Calculated average (GREEN if ≥75%, RED if <75%)
+    🗑️    = Delete button
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 4: HOW TO ADD COLUMNS    │
+└──────────────────────────────────────────────────────────────────┘
+
+    1. ACTIVITY COLUMNS:
+       Click [Add Activity]
+       → Creates "Act 1", "Act 2", etc.
+       → You can add name: "Act 1: Quiz on Cells"
+
+    2. PT COLUMNS:
+       Click [Add PT]
+       → Creates "PT" column
+       → Rename to "PT 1", "Lab Work", etc.
+
+    3. EXAM COLUMNS:
+       Click [Add Exam]
+       → Creates "Exam" column
+       → Rename to "Midterm", "Final", etc.
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 5: HOW TO ENCODE SCORES              │
+└──────────────────────────────────────────────────────────────────┘
+
+    1. Click on score box
+    2. Type the score
+    3. Press Tab (next) or Enter (down)
+    4. Repeat for all students
+
+    TIPS:
+    ✓ Encode by column (faster)
+    ✓ Use Tab key to move quickly
+    ✓ Empty boxes show "MISS" in red
+    ✓ Average auto-calculates
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 6: ADJUST WEIGHTS              │
+└──────────────────────────────────────────────────────────────────┘
+
+    Default:
+    Activity: 30% + PT: 50% + Exam: 20% = 100% ✓
+
+    To change:
+    1. Click [Update Weights]
+    2. Enter new percentages
+    3. Must total 100%
+    4. Click OK
+
+    Example:
+    Activity: 40% + PT: 40% + Exam: 20% = 100% ✓
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ STEP 7: SAVE & SEND                     │
+└──────────────────────────────────────────────────────────────────┘
+
+    AUTO-SAVE:
+    ✓ Every 30 seconds
+    ✓ When you close tab
+    ✓ Saves to Firebase (cloud) + localStorage (backup)
+
+    MANUAL SEND:
+    Click [Send to Registrar]
+    → Registrar receives notification
+    → Grades saved to cloud immediately
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ COLOR CODING                                    │
+└──────────────────────────────────────────────────────────────────┘
+
+    🔴 RED BOX 
+       → Missing score 
+       → Shows "MISS"
+
+    🟢 GREEN AVERAGE 
+       → 75% or above
+       → PASSING ✓
+
+    🔴 RED AVERAGE 
+       → Below 75%
+       → FAILING ✗
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ KEYBOARD SHORTCUTS                                               │
+└──────────────────────────────────────────────────────────────────┘
+
+    Tab          → Next cell (right)
+    Shift + Tab  → Previous cell (left)
+    Enter        → Cell below (down)
+    Ctrl + S     → Manual save
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ CHECKLIST BEFORE SENDING        │
+└──────────────────────────────────────────────────────────────────┘
+
+    □ All students added?
+    □ All columns added?
+    □ All scores encoded? 
+    □ Averages calculated correctly?
+    □ Weights correct? 
+    □ Firebase connected? 
+    □ Ready to send to registrar?
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING                                  │
+└──────────────────────────────────────────────────────────────────┘
+
+    Problem: Grades not saving
+    Solution:
+    1. Check internet connection
+    2. Press F12 (open console)
+    3. Look for errors
+    4. Run firebase-test.html
+
+    Problem: Can't login
+    Solution:
+    1. Check email is authorized
+    2. Password: CCCS2026
+    3. Select correct role (Teacher)
+
+    Problem: Firebase error
+    Solution:
+    1. Open firebase-test.html
+    2. Click "Run Tests"
+    3. Check which test fails
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ EXAMPLE: COMPLETE FLOW                                           │
+└──────────────────────────────────────────────────────────────────┘
+
+    1. Login with email & password
+       ↓
+    2. Select: Grade 12 → STEM → Margaret → 1st Sem → 1st Q → Gen Chem 1
+       ↓
+    3. Add students (Boys & Girls)
+       ↓
+    4. Add columns (Activities, PT, Exam)
+       ↓
+    5. Set max points (20, 30, 50, 100)
+       ↓
+    6. Encode all scores
+       ↓
+    7. Check averages (all green?)
+       ↓
+    8. Click "Send to Registrar"
+       ↓
+    9. Done! ✓
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║                         IMPORTANT NOTES                          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✓ Always check Firebase connection before encoding
+✓ Encode regularly, don't wait for deadline
+✓ Double-check scores before sending
+✓ Keep backup (system auto-saves to cloud + local)
+✓ Contact admin if you encounter problems
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    Made with ❤️ for CCCS Teachers                ║
+╚══════════════════════════════════════════════════════════════════╝
